@@ -132,3 +132,5 @@ openapi.initialize(openapi_args);
 
 app.disable("etag"); // As an API server, it's waste of time
 app.listen(config_port);
+
+console.log("Listening at", config_port);
