@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Anonymous services for nm-editor",
   "main": "index.js",
+  "scripts": {"start": "node index.js"},
   "author": "okuoku <mjt@cltn.org>",
   "license": "CC0-1.0",
   "private": false,
