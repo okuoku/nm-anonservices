@@ -1,0 +1,73 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API",
+        "version": "1.0.0",
+        "contact": {}
+    },
+    "security": [],
+    "servers": [],
+    "paths": {
+        "/{service}/{user}/{repo}/resolve": {
+            "get": {
+                "summary": "Resolve head to Git sha1",
+                "description": "Resolve specified sha1",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ref name",
+                        "allowEmptyValue": false
+                    }
+                ],
+                "operationId": "resolve",
+                "responses": {
+                    "default": {
+                        "description": "Hash"
+                    }
+                }
+            }
+        },
+        "/{service}/{user}/{repo}/pathderef": {
+            "get": {
+                "summary": "",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "ref",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "ref name"
+                    },
+                    {
+                        "name": "path",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "path name"
+                    }
+                ],
+                "operationId": "pathDereference",
+                "responses": {
+                    "default": {
+                        "description": "Path"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "links": {},
+        "callbacks": {},
+        "schemas": {}
+    }
+}
