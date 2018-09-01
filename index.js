@@ -7,7 +7,7 @@ const octokit = require('@octokit/rest')();
 const LRU = require('lru-cache');
 
 // Load configuration, secrets
-const config_port = 9999;
+const config_port = process.env.PORT ? process.env.PORT : 9999;
 const config_gh_key = process.env.GH_KEY;
 
 if(!config_gh_key){
