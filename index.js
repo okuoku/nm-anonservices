@@ -31,7 +31,7 @@ function resolve_ref(req, res, ref){
 }
 
 // Caching
-ref_cache = LRU({ max: 5000, maxAge: 1000 * 5});
+var ref_cache = LRU({ max: 5000, maxAge: 1000 * 5});
 function ref_cache_getkey(service, user, repo, head){
     return service + "/" + user + "/" + repo + "/" + head;
 }
